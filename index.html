@@ -3,97 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎉 Selamat Ulang Tahun ✨</title>
-    <!-- tailwind css -->
-      <script src="https://cdn.tailwindcss.com"></script>
-    <!-- AOSJS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>NOT FOUND</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-slate-900 overflow-hidden h-screen">
-    <div id="emoji-container" class="fixed inset-0 pointer-events-none"></div>
-    <div class="w-full h-dvh flex items-center justify-center">
-      <div
-        data-aos="zoom-in"
-        data-aos-duration="1200"
-        data-aos-easing="ease-out-back"
-        class="relative z-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 md:p-12 text-center shadow-2xl max-w-md mx-4"
-      >
-        <h1
-          data-aos="fade-down"
-          data-aos-delay="300"
-          class="text-3xl md:text-3xl font-bold text-white text-left"
-        >
-          🎉🎉🎉🎉🎉🎉 <br> お誕生日おめでとうございます！ <br>   
-        </h1>
 
+  <body class="flex justify-center items-center h-dvh bg-slate-900 px-4">
+    <div class="text-center p-5">
+      <!-- ICON / BOX -->
+      <div class="flex justify-center mb-6">
+        <div
+          class="w-16 h-16 sm:w-20 sm:h-20 md:w-24~ md:h-24 animate-bounce bg-amber-600 rounded-xl"
+        ></div>
+      </div>
+
+      <!-- TEXT -->
+      <div
+        class="bg-linear-to-r from-blue-500 via-green-400 to-blue-300 bg-clip-text text-transparent"
+      >
         <p
-          data-aos="fade-up"
-          data-aos-delay="600"
-          class="text-slate-200 text-base md:text-lg leading-relaxed py-2 text-right "
+          class="font-bold leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
         >
-          Semoga panjang umur, sehat selalu, dan semua doa baik hari ini kembali
-          padamu berkali-kali lipat ✨
+          Maaf Halaman Anda Salah
         </p>
 
-        <div data-aos="fade-up" data-aos-delay="900" class="mt-">
-          <span
-            class="inline-block px-6 py-2 rounded-full bg-pink-500/80 text-white font-semibold shadow-lg "
-          >
-            🎁 おめでとうございます！
-          </span>
-        </div>
+        <p class="font-bold mt-2 text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          Coba ke halaman ini
+        </p>
+      </div>
+
+      <!-- BUTTON -->
+      <div class="flex justify-center mt-6">
+        <a
+          href="index.html"
+          class="inline-block px-6 py-3 rounded-full font-bold text-base sm:text-lg md:text-xl bg-linear-to-r from-blue-500 via-green-400 to-blue-300 text-blue-900 shadow-lg hover:scale-105 transition"
+        >
+          Kunjungi yaa
+        </a>
       </div>
     </div>
-
-    <audio controls autoplay loop>
-      <source src="Song1.mp3" type="audio/mp3">
-    </audio>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <script>
-      AOS.init();
-
-      tailwind.config = {
-        theme: {
-          extend: {
-            keyframes: {
-              floatUp: {
-                "0%": { transform: "translateY(0)", opacity: "1" },
-                "100%": { transform: "translateY(-110vh)", opacity: "0" },
-              },
-            },
-            animation: {
-              floatUp: "floatUp linear forwards",
-            },
-          },
-        },
-      };
-
-      const emojis = ["✨", "🎉", "🔥", "🌸", "💫", "🎈", "🎊", "🌟"];
-      const container = document.getElementById("emoji-container");
-
-      
-      function createEmoji() {
-        const emoji = document.createElement("span");
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-
-        emoji.className = "absolute bottom-0 animate-floatUp select-none";
-
-        emoji.style.left = Math.random() * 100 + "vw";
-        emoji.style.fontSize = 20 + Math.random() * 30 + "px";
-        emoji.style.animationDuration = 4 + Math.random() * 4 + "s";
-
-        container.appendChild(emoji);
-
-        setTimeout(() => {
-          emoji.remove();
-        }, 5000);
-      }
-
-      setInterval(createEmoji, 400);
-    </script>
   </body>
 </html>
